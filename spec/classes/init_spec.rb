@@ -18,10 +18,5 @@ describe 'puppet_munki' do
 
   context 'with default values set for windows' do
 
-      #let(:facts) do {
-      #  'os' => {
-      #    'name'   => 'windows',
-      #    'family' => 'windows'
-      #  },
   end
 end

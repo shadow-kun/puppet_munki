@@ -47,18 +47,21 @@
 class puppet_munki (
     $munki_repo_url = 'http://munki/munki_repo/',
     $munki_clientidentifier = '',
-    $munki_additionalheaders = '') {
+    $munki_additionalheaders = ''
+  ) {
 
       # Check for OSX and run only if OSX
       if $facts['os']['family'] == 'Darwin' {
-          class { 'mac_admin::munki':
-            repourl          => $munki_repo_url,
-            suppress_stop    => true,
-            bootstrap        => true,
-            clientidentifier => $munki_clientidentifier,
-        }
-      }
+        notify { 'Puppet_munki - OSX detected.': }
+#          class { 'mac_admin::munki':
+  #          repourl          => $munki_repo_url,
+  #          suppress_stop    => true,
+  #          bootstrap        => true,
+  ##          clientidentifier => $munki_clientidentifier,
+  #
+
     }
+}
 
 
 #        # checks to see if an internal server source is set.

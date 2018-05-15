@@ -1,6 +1,6 @@
 {
   "name": "shadowkun-puppet_munki",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Daniel Johnson",
   "summary": "Puppet munki module that allows multiple installs via array inputs",
   "license": "Apache-2.0",
@@ -11,13 +11,11 @@
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": ">= 1.0.0"
-    },
+    }
+  ],
+  "operatingsystem_support": [
     {
-      "name": "grahamgilbert-mac_admin",
-      "version_requirement": ">= 0.2.1"
-    },
-    {
-      "name": "grahamgilbert-macdefaults"
+      "operatingsystem": "Darwin"
     }
   ],
   "data_provider": null
